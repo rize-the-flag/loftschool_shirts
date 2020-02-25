@@ -1,0 +1,29 @@
+@import "smart-grid";
+.reset();
+
+
+
+.wrap_main {
+  .wrapper();
+  .row {
+    .row-flex();
+    & > div {
+      width:  25%;
+      border: 1px solid #f00;
+      box-sizing: border-box;
+    }
+    & > div:nth-child(3){
+      border: 1px solid #000;
+      .size(5);
+      .shift-md(1);
+      .size-md(12);
+
+      .md-block({background-color: #0f0});
+
+    }
+  }
+}
+
+.wrap_main_fluid {
+  .wrapper-full();
+}
