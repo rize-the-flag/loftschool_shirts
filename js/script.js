@@ -56,9 +56,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+function lea_a(arg) {
+    console.log(arg);
+}
 
 function getDateTime() {
     let now = new Date();
-    return[now.getHours(), now.getMinutes(), now.getSeconds()]
+    return[now.getHours(), now.getMinutes(), now.getSeconds()];
 }
 
