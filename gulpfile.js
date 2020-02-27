@@ -9,7 +9,7 @@ var smartgrid = require('smart-grid');
 
 
 gulp.task('compile-css', ()=>{
-     return gulp.src('./less/*.less')
+     return gulp.src('./less/style.less')
          .pipe(less())
          .pipe(autoprefixer({cascade: false}))
          .pipe(cssmin())
