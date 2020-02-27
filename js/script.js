@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', function () {
         let div = showNotification({
             top: 10, // 10px от верхней границы окна (по умолчанию 0px)
             right: 10, // 10px от правого края окна (по умолчанию 0px)
-            className: "welcome" // дополнительный класс для div (необязательно)
+            className: "welcome", // дополнительный класс для div (необязательно)
+            html: "Pishov nahiu"
         });
     setTimeout(()=>{
         div.style.visibility = 'hidden';
         div.style.opacity = '0';
     }, 10000);
-
 });
 
 
