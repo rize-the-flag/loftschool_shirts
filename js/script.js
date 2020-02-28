@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         div.style.visibility = 'hidden';
         div.style.opacity = '0';
     }, 10000);
-    let a = 'aaa';
+
 });
 
 
