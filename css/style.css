@@ -337,20 +337,7 @@ html body a {
   align-items: center;
   padding-top: 27px;
 }
-.wrapper .hero header .mail {
-  text-align: center;
-  font-size: 16px;
-  color: #212112;
-}
-.wrapper .hero header .mail__title {
-  margin-bottom: 3px;
-}
-.wrapper .hero header .mail__link {
-  background: #212121;
-  color: #FFBC2F;
-  font-size: 16px;
-  padding: 5px 10px;
-}
+
 .wrapper .hero .hero__content {
   position: absolute;
   top: 51%;
@@ -359,21 +346,35 @@ html body a {
   width: 1140px;
   height: 70%;
 }
-.wrapper .hero .hero__content .fade-slider {
+
+.mail {
+  text-align: center;
+  font-size: 16px;
+  color: #212112;
+}
+
+.mail__title {
+  margin-bottom: 3px;
+}
+
+.mail__link {
+  background: #212121;
+  color: #FFBC2F;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.fade-slider {
   width: 100%;
   height: 100%;
 }
-.wrapper .hero .hero__content .fade-slider__item {
+
+.fade-slider__item {
   background: url("/images/content/hero/slider_pic_1.png") center center / contain no-repeat;
   height: 100%;
 }
-.wrapper .hero .hero__content .fade-slider__item .fade-slider__text {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-164%, -52%);
-}
-.wrapper .hero .hero__content .fade-slider__item .fade-slider__text .lined-text {
+
+.fade-slider__item .lined-text {
   font-family: "alegreya", arial, sans-serif;
   font-size: 63px;
   text-transform: uppercase;
@@ -382,15 +383,25 @@ html body a {
   flex-direction: column;
   align-items: flex-start;
 }
-.wrapper .hero .hero__content .fade-slider__item .fade-slider__text .lined-text__word {
+
+.fade-slider__item .lined-text__word {
   background: #000000;
   padding: 0 17px 8px;
   color: #FFFFFF;
   margin-top: -7px;
 }
-.wrapper .hero .hero__content .fade-slider__item .fade-slider__text .lined-text__word--color-yellow {
+
+.fade-slider__item .lined-text__word--color-yellow {
   color: #FFBC2F;
 }
-.wrapper .hero .hero__content .fade-slider__item .fade-slider__text .lined-text__word:nth-child(2n) {
+
+.fade-slider__item .lined-text__word:nth-child(2n) {
   margin-left: 8px;
+}
+
+.fade-slider__item .fade-slider__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-164%, -52%);
 }

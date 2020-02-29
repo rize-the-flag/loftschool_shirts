@@ -38,23 +38,6 @@ html {
             justify-content: space-between;
             align-items: center;
             padding-top: 27px;
-
-            .mail {
-                text-align: center;
-                font-size: 16px;
-                color: #212112;
-
-                &__title {
-                    margin-bottom: 3px;
-                }
-
-                &__link {
-                    background: #212121;
-                    color: #FFBC2F;
-                    font-size: 16px;
-                    padding: 5px 10px;
-                }
-            }
         }
 
         .hero__content {
@@ -64,48 +47,65 @@ html {
             transform: translate(-50%, -50%);
             width: 1140px;
             height: 70%;
+        }
+    }
+}
 
-            .fade-slider {
-                width: 100%;
-                height: 100%;
+.mail {
+    text-align: center;
+    font-size: 16px;
+    color: #212112;
 
-                &__item {
-                    background: url("/images/content/hero/slider_pic_1.png") center center / contain no-repeat;
-                    height: 100%;
+    &__title {
+        margin-bottom: 3px;
+    }
 
-                    .fade-slider__text {
-                        position: absolute;
-                        left: 50%;
-                        top: 50%;
-                        transform: translate(-164%, -52%);
+    &__link {
+        background: #212121;
+        color: #FFBC2F;
+        font-size: 16px;
+        padding: 5px 10px;
+    }
+}
 
-                        .lined-text {
-                            font-family: "alegreya", arial, sans-serif;
-                            font-size: 63px;
-                            text-transform: uppercase;
-                            line-height: 1;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
+.fade-slider {
+    width: 100%;
+    height: 100%;
 
-                            &__word {
-                                background: #000000;
-                                padding: 0 17px 8px;
-                                color: #FFFFFF;
-                                margin-top: -7px;
+    &__item {
+        background: url("/images/content/hero/slider_pic_1.png") center center / contain no-repeat;
+        height: 100%;
 
-                                &--color-yellow {
-                                    color: #FFBC2F;
-                                }
+        .lined-text {
+            font-family: "alegreya", arial, sans-serif;
+            font-size: 63px;
+            text-transform: uppercase;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
-                                &:nth-child(2n) {
-                                    margin-left: 8px;
-                                }
-                            }
-                        }
-                    }
+            &__word {
+                background: #000000;
+                padding: 0 17px 8px;
+                color: #FFFFFF;
+                margin-top: -7px;
+
+                &--color-yellow {
+                    color: #FFBC2F;
+                }
+
+                &:nth-child(2n) {
+                    margin-left: 8px;
                 }
             }
+        }
+
+        .fade-slider__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-164%, -52%);
         }
     }
 }
