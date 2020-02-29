@@ -1,53 +1,113 @@
-@import "smart-grid";
+@import "normalize.less";
 
-
-
-.alert {
-  padding: 15px;
-  border: 1px solid #d6e9c6;
-  border-radius: 4px;
-  color: #3c763d;
-  background-color: #dff0d8;
-  margin: 15px;
+@font-face {
+    font-family: "alegreya";
+    src: url("/fonts/alegreyasanssc-black-webfont.woff2") format("woff2"),
+    url("/fonts/alegreyasanssc-black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
+html {
+    body {
+        height: 100%;
+        font: 16px / 1.42 "Roboto", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 
-.wrap_main {
-  .wrapper();
-  .row {
-    .row-flex();
-    & > div {
-      width:  25%;
-      border: 1px solid #f00;
-      box-sizing: border-box;
+        a {
+            text-decoration: none;
+        }
     }
-    & > div:nth-child(3){
-      border: 1px solid #000;
-      .size(5);
-      .shift-md(1);
-      .size-md(12);
-      .md-block({background-color: #0f0});
+}
 
+.wrapper {
+    overflow: hidden;
+    min-width: 1310px;
+
+    .hero {
+        height: 100vh;
+        min-height: 650px;
+        background: url("/images/bg/hero.jpg") center center / cover no-repeat;
+        position: relative;
+
+        header {
+            max-width: 1290px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 27px;
+
+            .mail {
+                text-align: center;
+                font-size: 16px;
+                color: #212112;
+
+                &__title {
+                    margin-bottom: 3px;
+                }
+
+                &__link {
+                    background: #212121;
+                    color: #FFBC2F;
+                    font-size: 16px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+
+        .hero__content {
+            position: absolute;
+            top: 51%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1140px;
+            height: 70%;
+
+            .fade-slider {
+                width: 100%;
+                height: 100%;
+
+                &__item {
+                    background: url("/images/content/hero/slider_pic_1.png") center center / contain no-repeat;
+                    height: 100%;
+
+                    .fade-slider__text {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-164%, -52%);
+
+                        .lined-text {
+                            font-family: "alegreya", arial, sans-serif;
+                            font-size: 63px;
+                            text-transform: uppercase;
+                            line-height: 1;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+
+                            &__word {
+                                background: #000000;
+                                padding: 0 17px 8px;
+                                color: #FFFFFF;
+                                margin-top: -7px;
+
+                                &--color-yellow {
+                                    color: #FFBC2F;
+                                }
+
+                                &:nth-child(2n) {
+                                    margin-left: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-  }
 }
 
-.wrap_main_fluid {
-  .wrapper-full();
-}
 
-.notification {
-  position: fixed;
-  z-index: 1000;
-  padding: 5px;
-  border: 1px solid black;
-  font-size: 20px;
-  background: white;
-  text-align: center;
-  transition: all 1500ms ease;
-}
-
-.welcome {
-  background: #b80000;
-  color: yellow;
-}
