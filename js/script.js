@@ -1,24 +1,35 @@
+'use strict';
+
 document.addEventListener( 'DOMContentLoaded', function () {
 
-    function showNotification( obj ) {
-        if ( obj ) {
-            let div = document.createElement( 'div' );
+    const sideBar = document.querySelector( '.sidebar' );
+    document.querySelector( '.sidebar__hamburger' ).addEventListener( 'click', () => {
+        sideBar.classList.add( 'sidebar--opened' );
+    } );
 
-            obj.top = obj.top || 0;
-            obj.right = obj.right || 0;
-            obj.className = obj.className || '';
+    document.querySelector( '.sidebar__close' ).addEventListener( 'click', () => {
+        sideBar.classList.remove( 'sidebar--opened' );
+    } );
 
-            div.classList.add( 'notification' );
-            div.classList.add( obj.className );
-            div.style.top = obj.top + 'px';
-            div.style.right = obj.right + 'px';
-            div.textContent = obj.html || 'AoaiADsdasda';
-            div.style.position = 'absolute';
+    const slider = document.querySelectorAll( '.fade-slider__item' );
+    let idx = 0;
 
-            document.body.appendChild( div );
-            return div;
+    setInterval( () => {
+        slider[ idx ].classList.remove( 'fade-slider__item--visible' );
+        idx++;
+        if ( idx >= slider.length ) {
+            idx = 0;
         }
-    }
-} );
+        slider[ idx ].classList.add( 'fade-slider__item--visible' );
+    }, 5000 );
 
+    const controlls = document.querySelectorAll('filter__link');
+    const activeClass = 'filter__item--active';
+
+    controlls.forEach((control) => {
+        control.addEventListener( 'click',evt => {
+            evt.preventDefault();
+        });
+    })
+} );
 
