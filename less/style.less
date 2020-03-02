@@ -105,7 +105,6 @@ slider
 
     &__item {
         background: center center / contain no-repeat;
-        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -216,7 +215,7 @@ products and filter styles
         margin-right: 40px;
 
         &:last-child {
-            margin-right: 0px;
+            margin-right: 0;
         }
     }
 
@@ -603,26 +602,27 @@ Side menu
             fill: @colorItemYellowBackground;
         }
     }
-}
 
-.sidebar--opened {
-    width: 325px;
-    padding: 0 3% 0 4%;
+    &--opened {
+        width: 325px;
+        padding: 0 3% 0 4%;
 
-    .sidebar__header {
-        display: flex;
+        .sidebar__header {
+            display: flex;
+        }
+
+        .sidebar__menu {
+            left: 0;
+            width: 100%;
+            text-align: center;
+            transition-delay: 0.1s;
+        }
+
+        .sidebar__hamburger {
+            display: none;
+        }
     }
 
-    .sidebar__menu {
-        left: 0;
-        width: 100%;
-        text-align: center;
-        transition-delay: 0.1s;
-    }
-
-    .sidebar__hamburger {
-        display: none;
-    }
 }
 
 .side-menu {

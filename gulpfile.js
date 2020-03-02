@@ -33,13 +33,13 @@ exports.build = gulp.series( 'compile-css', 'compile-js' );
 gulp.task( 'watch', () => {
     browserSync.init( {
         server: {
-            baseDir: '/tshirts/helloworlds',
+            baseDir: '/tshirts/helloworlds/',
         },
         browser: 'chrome'
     } );
 
     gulp.watch( './less/**/*.less' ).on( 'change', () => {
-        gulp.src( './less/style.less' )
+        gulp.src( './less/product_style.less' )
             .pipe( less(
                 { plugins: [ autoprefix ] }
             ) ).on( 'error', e => {

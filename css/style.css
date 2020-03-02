@@ -480,7 +480,7 @@ products and filter styles
   margin-right: 40px;
 }
 .filter__item:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 .filter__item--active .filter__link {
   color: #FFC92F;

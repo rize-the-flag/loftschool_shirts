@@ -1,0 +1,115 @@
+@import "normalize";
+
+@font-face {
+    font-family: "alegreya";
+    src: url("../fonts/alegreyasanssc-black-webfont.woff2") format("woff2"),
+    url("../fonts/alegreyasanssc-black-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*================================
+General definitions
+ */
+html, body {
+    height: 100%;
+    font: 16px / 1.42 "Roboto", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: #212121;
+    }
+}
+
+/*===============================
+wrapper-head
+ */
+.wrap-head {
+    width: 100%;
+    background: url("../images/bg/hero.jpg") center 25.55% / cover no-repeat;
+    overflow: hidden;
+    margin-bottom: 90px;
+}
+
+/*==============================
+header container
+ */
+.header {
+    height: 180px;
+    margin: 0 auto;
+    width: 1290px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ----------------------------------------------------------------
+header promo and decorative text
+ */
+.promo {
+    transform: translate(11%, 15%);
+}
+
+.promo__link {
+    display: block;
+    position: relative;
+}
+
+.lined-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-22%, 60%);
+    display: flex;
+    flex-direction: column;
+}
+
+.lined-text__word {
+    background: #212121;
+    color: #FFFFFF;
+    font-family: "alegreya", arial, sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    line-height: 0.8;
+    font-weight: bold;
+    width: max-content;
+    padding: 5px 5px;
+    margin: -2px 0;
+    transform: rotate(0.6deg);
+
+    &:nth-child(2n) {
+        z-index: 1;
+        margin-left: 5px;
+    }
+
+    &-yellow {
+        color: #FFBC2F;
+    }
+}
+
+/*==============================
+mail (plate)
+ */
+.mail {
+    text-align: center;
+}
+
+.mail__text {
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.mail__link {
+    background-color: #212121;
+    color: #FFBC2F;
+    padding: 5px 10px;
+    font-size: 16px;
+}
