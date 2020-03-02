@@ -335,7 +335,7 @@ wrapper
  */
 .wrapper {
   overflow: hidden;
-  min-width: 1310px;
+  min-width: 1440px;
 }
 .hero {
   height: 100vh;
@@ -835,7 +835,7 @@ Side menu
   display: block;
   position: absolute;
   top: 27px;
-  left: 57%;
+  left: 50%;
   transform: translate(-50%);
 }
 .sidebar__hamburger .sidebar__hamburger-icon {
