@@ -16,8 +16,12 @@ html, body {
     font: 16px / 1.42 "Roboto", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: #fcf5e6;
 
     ul {
+        margin: 0;
+        padding: 0;
+
         li {
             list-style: none;
         }
@@ -26,6 +30,10 @@ html, body {
     a {
         text-decoration: none;
         color: #212121;
+    }
+
+    p {
+        margin: 0;
     }
 }
 
@@ -113,3 +121,250 @@ mail (plate)
     padding: 5px 10px;
     font-size: 16px;
 }
+
+/*==============================
+product view
+ */
+
+.wrap-section {
+    &:after {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        border-bottom: 1px solid #E0D9C8;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.wrap-content {
+    width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    //box-sizing: border-box;
+}
+
+
+.product-view {
+    display: flex;
+    padding: 10px 10px;
+    background-color: #FFC92F;
+    width: 100%;
+    height: 650px;
+}
+
+
+.product-image {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+
+    &__pic {
+        width: 100%;
+    }
+}
+
+
+/*==============================
+product form wrapper
+ */
+.wrap-form {
+    box-sizing: border-box;
+    background-color: #FCF5E6;
+    width: 56%;
+}
+
+/*==============================
+product form header
+ */
+.product-view__header {
+    margin: 25px 28px;
+}
+
+.product-view__title {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    color: #FCBA2E;
+}
+
+.product-view__product-name {
+    color: #1B1B1B;
+    font-family: "Yanone Kaffeesatz", arial, sans-serif;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.product-view__price {
+    font-family: "Yanone Kaffeesatz", arial, sans-serif;
+    font-weight: bold;
+    font-size: 38px;
+    width: max-content;
+    background-color: #FFC92F;
+    line-height: 1;
+    padding: 4px 15px;
+    margin-bottom: 29px;
+}
+
+.product-characteristics {
+    margin: 31px 30px 0;
+}
+
+/*==============================
+product-characteristics text info
+ */
+.product-characteristics__text {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: normal;
+    color: #333230;
+    font-size: 13px;
+    margin-bottom: 17px;
+    line-height: 1;
+
+    &:last-child {
+        margin-bottom: 34px;
+    }
+}
+
+.options {
+    margin: 28px 28px 33px;
+}
+
+/*==============================
+ sizes menu picker
+ */
+.menu-sizes {
+    display: flex;
+    margin-bottom: 28px;
+
+    &__item {
+        border: 2px solid #E4DDCC;
+        color: #4F4D4A;
+        font-size: 15px;
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        margin-right: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .150s;
+
+        &:hover:not(&--disabled) {
+            cursor: pointer;
+            background-color: #FFC92F;
+            border-color: #FFC92F;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active {
+            background-color: #FFC92F;
+            border-color: #FFC92F;
+        }
+
+        &--disabled {
+            color: #CAC3B3;
+        }
+    }
+}
+
+/*==============================
+color picker menu
+ */
+.color-picker {
+    display: flex;
+
+    &__item {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin-right: 19px;
+        position: relative;
+        box-sizing: border-box;
+        transition: all .150s;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--checked, &:hover:not(&--disabled) {
+            cursor: pointer;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translate(15.4%, -15.4%);
+                width: 29px;
+                height: 29px;
+                border-radius: 50%;
+                border: 3px solid #FFC92F;
+            }
+        }
+
+        &--black {
+            background-color: #2F2C25;
+        }
+
+        &--disabled {
+            border: 3px solid #E0D9C8;
+
+            &:before {
+                border: 3px solid transparent;
+            }
+        }
+
+        &--green {
+            background-color: #529029;
+        }
+
+        &--blue {
+            background-color: #39498D;
+        }
+
+        &--red {
+            background-color: #D82727;
+        }
+    }
+}
+
+/*==============================
+button
+ */
+.button{
+    margin-left: 28px;
+    width: 210px;
+    height: 50px;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .150s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #d82727;
+    }
+
+
+}
+
+.button__text{
+    font-family: "Yanone Kaffeesatz", arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-top: 5px;
+
+}
+
