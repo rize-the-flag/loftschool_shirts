@@ -519,6 +519,7 @@ product-characteristics text info
   border: 2px solid #E4DDCC;
   color: #4F4D4A;
   font-size: 15px;
+  font-weight: bold;
   width: 50px;
   height: 50px;
   box-sizing: border-box;
