@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Product view</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Ubuntu:400,700|Yanone+Kaffeesatz:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700|Ubuntu:400,700|Yanone+Kaffeesatz:400,700&display=swap&subset=cyrillic"
+          rel="stylesheet">
     <link rel="stylesheet" href="css/product_style.css">
 </head>
 <body>
@@ -17,7 +18,6 @@
         <div class="promo">
             <a href="#" class="promo__link">
                 <img src="./images/decor/header-guys.png" alt="header guys" class="promo__image">
-
                 <div class="lined-text">
                     <div class="lined-text__word">Три</div>
                     <div class="lined-text__word">Футболки</div>
@@ -41,7 +41,7 @@
         <div class="product-image">
             <img src="./images/tshirts/tshirt_08.png" alt="Rick and morty" class="product-image__pic">
         </div>
-        <section class="wrap-form">
+        <div class="wrap-form">
             <div class="wrap-section">
                 <div class="product-view__header">
                     <div class="product-view__title">Футболка Hurley</div>
@@ -59,46 +59,111 @@
                     <p class="product-characteristics__text">Артикул: MA002EWDOEZ6</p>
                 </div>
             </div>
-                <section class="options">
-                    <ul class="menu-sizes">
-                        <li class="menu-sizes__item menu-sizes__item--disabled">
-                            <div class="menu-size__item-text">XXS</div>
-                        </li>
-                        <li class="menu-sizes__item menu-sizes__item--disabled">
-                            <div class="menu-size__item-text">XS</div>
-                        </li>
-                        <li class="menu-sizes__item">
-                            <div class="menu-size__item-text">S</div>
-                        </li>
-                        <li class="menu-sizes__item">
-                            <div class="menu-size__item-text">M</div>
-                        </li>
-                        <li class="menu-sizes__item menu-sizes__item--active">
-                            <div class="menu-size__item-text">L</div>
-                        </li>
-                        <li class="menu-sizes__item">
-                            <div class="menu-size__item-text">XL</div>
-                        </li>
-                        <li class="menu-sizes__item">
-                            <div class="menu-size__item-text">2XL</div>
-                        </li>
-                        <li class="menu-sizes__item">
-                            <div class="menu-size__item-text">3XL</div>
-                        </li>
-                    </ul>
-                    <ul class="color-picker">
-                        <li class="color-picker__item color-picker__item--black"></li>
-                        <li class="color-picker__item color-picker__item--disabled"></li>
-                        <li class="color-picker__item color-picker__item--green color-picker__item--checked"></li>
-                        <li class="color-picker__item color-picker__item--blue"></li>
-                        <li class="color-picker__item color-picker__item--red"></li>
-                    </ul>
-                </section>
-                <div class="button">
-                    <div class="button__text">Купить</div>
-                </div>
-        </section>
+            <div class="options">
+                <ul class="menu-sizes">
+                    <li class="menu-sizes__item menu-sizes__item--disabled">
+                        <div class="menu-size__item-text">XXS</div>
+                    </li>
+                    <li class="menu-sizes__item menu-sizes__item--disabled">
+                        <div class="menu-size__item-text">XS</div>
+                    </li>
+                    <li class="menu-sizes__item">
+                        <div class="menu-size__item-text">S</div>
+                    </li>
+                    <li class="menu-sizes__item">
+                        <div class="menu-size__item-text">M</div>
+                    </li>
+                    <li class="menu-sizes__item menu-sizes__item--active">
+                        <div class="menu-size__item-text">L</div>
+                    </li>
+                    <li class="menu-sizes__item">
+                        <div class="menu-size__item-text">XL</div>
+                    </li>
+                    <li class="menu-sizes__item">
+                        <div class="menu-size__item-text">2XL</div>
+                    </li>
+                    <li class="menu-sizes__item">
+                        <div class="menu-size__item-text">3XL</div>
+                    </li>
+                </ul>
+                <ul class="color-picker">
+                    <li class="color-picker__item color-picker__item--black"></li>
+                    <li class="color-picker__item color-picker__item--disabled"></li>
+                    <li class="color-picker__item color-picker__item--green color-picker__item--checked"></li>
+                    <li class="color-picker__item color-picker__item--blue"></li>
+                    <li class="color-picker__item color-picker__item--red"></li>
+                </ul>
+            </div>
+            <div class="button">
+                <div class="button__text">Купить</div>
+            </div>
+        </div>
     </section>
+    <section class="product-info">
+        <div class="tabs">
+            <div class="tabs__button tabs__button--active">Описание</div>
+            <div class="tabs__button">Таблица размеров</div>
+            <div class="tabs__button">Условия доставки</div>
+            <div class="tabs__button">О бренде</div>
+        </div>
+        <div class="product-info__tab">
+            <div class="operating-conditions">
+                <div class="operating-conditions__row">
+                    <svg class="operating-conditions__icon">
+                        <use xlink:href="images/icons-sprite.svg#washing_01"></use>
+                    </svg>
+                    <div class="operating-conditions__description">
+                        <span class="operating-conditions__description-text">Стирать при температуре 30&deg;C</span>
+                    </div>
+                </div>
+                <div class="operating-conditions__row">
+                    <svg class="operating-conditions__icon">
+                        <use xlink:href="images/icons-sprite.svg#washing_02"></use>
+                    </svg>
+                    <div class="operating-conditions__description">
+                        <span class="operating-conditions__description-text">Не  отбеливать</span>
+                    </div>
+                </div>
+                <div class="operating-conditions__row">
+                    <svg class="operating-conditions__icon">
+                        <use xlink:href="images/icons-sprite.svg#washing_03"></use>
+                    </svg>
+                    <div class="operating-conditions__description">
+                        <span class="operating-conditions__description-text">Гладить теплым утюгом с внутренней стороны</span>
+                    </div>
+                </div>
+                <div class="operating-conditions__row">
+                    <svg class="operating-conditions__icon">
+                        <use xlink:href="images/icons-sprite.svg#washing_04"></use>
+                    </svg>
+                    <div class="operating-conditions__description">
+                        <span class="operating-conditions__description-text">Не подвергать химической чистке</span>
+                    </div>
+                </div>
+                <div class="operating-conditions__row">
+                    <svg class="operating-conditions__icon">
+                        <use xlink:href="images/icons-sprite.svg#washing_05"></use>
+                    </svg>
+                    <div class="operating-conditions__description">
+                        <span class="operating-conditions__description-text">Не сушить в барабане</span>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                <div class="description__text">
+                    Футболка из приятной ткани с качественным принтом, это одна из самых универсальных вещей
+                    в гардеробе. Она подойдет и для занятий спортом, и для прогулок, и для работы, если разрешен свободный дресс-код.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        BLABNLABNLA
+        <nav></nav>
+        <div class="extras"></div>
+    </footer>
+
 </div>
 </body>
 </html>

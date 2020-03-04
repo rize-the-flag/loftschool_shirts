@@ -39,7 +39,7 @@ gulp.task( 'watch', () => {
     } );
 
     gulp.watch( './less/**/*.less' ).on( 'change', () => {
-        gulp.src( './less/product_style.less' )
+        gulp.src( './less/product_style.less', './less/style.less'  )
             .pipe( less(
                 { plugins: [ autoprefix ] }
             ) ).on( 'error', e => {

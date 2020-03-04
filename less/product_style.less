@@ -11,38 +11,40 @@
 /*================================
 General definitions
  */
-html, body {
-    height: 100%;
-    font: 16px / 1.42 "Roboto", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #fcf5e6;
+html {
+    body {
+        height: 100%;
+        font: 16px / 1.42 "Roboto", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #FCF5E6;
 
-    ul {
-        margin: 0;
-        padding: 0;
+        ul {
+            margin: 0;
+            padding: 0;
 
-        li {
-            list-style: none;
+            li {
+                list-style: none;
+            }
         }
-    }
 
-    a {
-        text-decoration: none;
-        color: #212121;
-    }
+        a {
+            text-decoration: none;
+            color: #212121;
+        }
 
-    p {
-        margin: 0;
+        p {
+            margin: 0;
+        }
     }
 }
 
 /*===============================
-wrapper-head
+header wrapper
  */
 .wrap-head {
     width: 100%;
-    background: url("../images/bg/hero.jpg") center 25.55% / cover no-repeat;
+    background: url("../images/bg/hero.jpg") center 25.54% / cover no-repeat;
     overflow: hidden;
     margin-bottom: 90px;
 }
@@ -141,6 +143,7 @@ product view
     width: 1100px;
     display: flex;
     margin: 0 auto;
+    flex-direction: column;
     //box-sizing: border-box;
 }
 
@@ -151,6 +154,7 @@ product view
     background-color: #FFC92F;
     width: 100%;
     height: 650px;
+    margin-bottom: 93px;
 }
 
 
@@ -341,7 +345,7 @@ color picker menu
 /*==============================
 button
  */
-.button{
+.button {
     margin-left: 28px;
     width: 210px;
     height: 50px;
@@ -353,19 +357,101 @@ button
 
     &:hover {
         cursor: pointer;
-        background-color: #d82727;
+        background-color: #D82727;
     }
-
-
 }
 
-.button__text{
+.button__text {
     font-family: "Yanone Kaffeesatz", arial, sans-serif;
     font-weight: bold;
-    color: #fff;
+    color: #FFFFFF;
     font-size: 32px;
     text-transform: uppercase;
     margin-top: 5px;
-
 }
 
+/*==============================
+product info tabs
+ */
+
+.product-info {
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tabs__button {
+        text-transform: uppercase;
+        padding: 9px 19px;
+        margin-right: 23px;
+        color: #1B1B1B;
+        font-family: "Yanone Kaffeesatz", arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        transition: all .150s;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &--active, &:hover {
+            background-color: #1C1C1C;
+            color: #FFC92F;
+            cursor: pointer;
+        }
+    }
+}
+
+.product-info__tab {
+    border: 10px solid #FFC92F;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.operating-conditions {
+
+    //background-color: #fcf5e6;
+    padding: 44px 35px;
+    flex: 1;
+
+    &__row {
+        display: flex;
+        margin-bottom: 18px;
+    }
+
+    &__icon {
+        height: 24px;
+        width: 24px;
+        margin-right: 26px;
+    }
+
+    &__description {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-text {
+            display: block;
+        }
+    }
+}
+
+.description {
+    border-left: 1px solid #E5DECE;
+    padding: 44px 85px 44px 35px;
+    flex: 2;
+
+    &__text {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1.6;
+        font-size: 12px;
+    }
+}
