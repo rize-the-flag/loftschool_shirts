@@ -622,10 +622,6 @@ button
 /*==============================
 product info tabs
  */
-.product-info {
-  width: 100%;
-  margin-bottom: 90px;
-}
 .tabs {
   display: flex;
   justify-content: center;
@@ -633,7 +629,7 @@ product info tabs
 }
 .tabs .tabs__button {
   text-transform: uppercase;
-  padding: 9px 19px;
+  padding: 0 19px;
   margin-right: 23px;
   color: #1B1B1B;
   font-family: "Yanone Kaffeesatz", arial, sans-serif;
@@ -651,42 +647,104 @@ product info tabs
   color: #FFC92F;
   cursor: pointer;
 }
+.product-info {
+  width: 100%;
+  margin-bottom: 90px;
+}
 .product-info__tab {
   border: 10px solid #FFC92F;
   box-sizing: border-box;
-  display: flex;
+  display: none;
+  opacity: 0;
 }
-.operating-conditions {
-  padding: 44px 35px;
+.product-info__tab--active {
+  display: flex;
+  opacity: 1;
+}
+.product-info__col1 {
   flex: 1;
-}
-.operating-conditions__row {
   display: flex;
-  margin-bottom: 18px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.operating-conditions__icon {
+.product-info__col2 {
+  border-left: 1px solid #E5DECE;
+  flex: 2;
+}
+.product-info__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-info__row:last-child {
+  margin-bottom: 0;
+}
+.product-info__icon {
   height: 24px;
   width: 24px;
   margin-right: 26px;
 }
-.operating-conditions__description {
+.product-info__description {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1;
   font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
-.operating-conditions__description-text {
+.product-info__description-text {
   display: block;
 }
-.description {
-  border-left: 1px solid #E5DECE;
-  padding: 44px 85px 44px 35px;
-  flex: 2;
-}
-.description__text {
+.product-info__text {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.6;
   font-size: 12px;
+  padding: 44px 85px 44px 35px;
+}
+.product-info__pict {
+  width: 70%;
+  margin-top: 45px;
+  margin-bottom: 42px;
+}
+.ordered-list {
+  display: block;
+  margin-bottom: 47px;
+}
+.ordered-list__item {
+  list-style: decimal;
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.42;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+/*==============================
+Sizes Table
+ */
+.sizes-table {
+  height: 100%;
+  width: 100%;
+  -webkit-border-horizontal-spacing: 0;
+  -webkit-border-vertical-spacing: 0;
+  text-align: center;
+  border-collapse: collapse;
+}
+.sizes-table__item {
+  box-sizing: border-box;
+  border: 1px solid #e5decd;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 12px;
+  width: calc(77.77777778% / 9 * 1);
+}
+.sizes-table__item:first-child {
+  text-align: left;
+  padding-left: 15px;
+  border-left: none;
+  width: calc(100% / 9 * 2);
+}
+.sizes-table__item--head {
+  background-color: #f6efe0;
+  font-size: 14px;
+  font-weight: bold;
 }
