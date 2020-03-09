@@ -334,6 +334,12 @@ html body a {
 html body p {
   margin: 0;
 }
+.wrap-content {
+  width: 1100px;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+}
 /*===============================
 header wrapper
  */
@@ -421,19 +427,14 @@ product view
   width: 100%;
   margin: 0;
 }
-.wrap-content {
-  width: 1100px;
-  display: flex;
-  margin: 0 auto;
-  flex-direction: column;
-}
 .product-view {
   display: flex;
   padding: 10px 10px;
   background-color: #FFC92F;
   width: 100%;
-  height: 650px;
+  min-height: 668px;
   margin-bottom: 93px;
+  box-sizing: border-box;
 }
 .product-image {
   display: flex;
@@ -444,6 +445,10 @@ product view
 }
 .product-image__pic {
   width: 100%;
+  display: none;
+}
+.product-image__pic--active {
+  display: block;
 }
 /*==============================
 product form wrapper
@@ -472,6 +477,7 @@ product form header
   font-size: 54px;
   line-height: 1;
   text-transform: uppercase;
+  margin: 5px 0;
 }
 .product-view__price {
   font-family: "Yanone Kaffeesatz", arial, sans-serif;
@@ -629,14 +635,15 @@ product info tabs
 }
 .tabs .tabs__button {
   text-transform: uppercase;
-  padding: 0 19px;
+  padding: 8px 19px 4px;
   margin-right: 23px;
   color: #1B1B1B;
   font-family: "Yanone Kaffeesatz", arial, sans-serif;
+  line-height: 1;
   font-size: 24px;
   font-weight: bold;
   transition: all 0.15s;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 .tabs .tabs__button:last-child {
   margin-right: 0;
@@ -651,62 +658,90 @@ product info tabs
   width: 100%;
   margin-bottom: 90px;
 }
+.product-info .wrap-left-rows {
+  display: flex;
+  flex-direction: column;
+  margin: 38px 33px;
+}
+.product-info .wrap-right-rows {
+  display: flex;
+  margin: 43px 88px 43px 47px;
+}
 .product-info__tab {
   border: 10px solid #FFC92F;
   box-sizing: border-box;
   display: none;
   opacity: 0;
+  min-height: 260px;
 }
 .product-info__tab--active {
   display: flex;
   opacity: 1;
 }
 .product-info__col1 {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-basis: 32%;
 }
 .product-info__col2 {
   border-left: 1px solid #E5DECE;
-  flex: 2;
+  flex-basis: 70%;
+  display: flex;
 }
 .product-info__row {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 17px;
 }
 .product-info__row:last-child {
   margin-bottom: 0;
 }
 .product-info__icon {
-  height: 24px;
-  width: 24px;
+  height: 25px;
+  width: 32px;
   margin-right: 26px;
 }
 .product-info__description {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1;
-  font-size: 12px;
+  font-size: 13px;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
 }
-.product-info__description-text {
-  display: block;
+.product-info__description-sizes {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .product-info__text {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.6;
-  font-size: 12px;
-  padding: 44px 85px 44px 35px;
+  font-size: 13px;
+}
+.product-info__indent:not(:first-child) {
+  margin-top: 10px;
 }
 .product-info__pict {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.product-info__pict--delivery {
+  width: 50%;
+  margin: 40px 60px 40px 40px;
+}
+.product-info__pict--sizes {
+  width: 73%;
+}
+.product-info__pict--brand {
   width: 70%;
-  margin-top: 45px;
-  margin-bottom: 42px;
+  margin-top: 50px;
 }
 .ordered-list {
   display: block;
@@ -732,7 +767,7 @@ Sizes Table
 }
 .sizes-table__item {
   box-sizing: border-box;
-  border: 1px solid #e5decd;
+  border: 1px solid #E5DECD;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 12px;
   width: calc(77.77777778% / 9 * 1);
@@ -744,7 +779,119 @@ Sizes Table
   width: calc(100% / 9 * 2);
 }
 .sizes-table__item--head {
-  background-color: #f6efe0;
+  background-color: #F6EFE0;
   font-size: 14px;
   font-weight: bold;
+}
+/*==============================
+footer
+ */
+.footer {
+  margin-bottom: 115px;
+}
+.site-menu {
+  margin-bottom: 115px;
+}
+.site-menu__sections {
+  display: flex;
+  justify-content: space-between;
+}
+.site-menu__col {
+  margin-right: 20px;
+}
+.site-menu__col:last-child {
+  margin-right: 0;
+}
+.site-menu__text-row {
+  color: inherit;
+  display: block;
+  margin-bottom: 5px;
+}
+.site-menu__title {
+  font-family: "Yanone Kaffeesatz", arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #212121;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.site-menu__text {
+  font-size: 15px;
+  color: #212121;
+  margin-bottom: 30px;
+}
+.site-menu__item {
+  margin-bottom: 15px;
+}
+.site-menu__link {
+  color: #737373;
+  font-size: 15px;
+  transition: all 0.15s;
+}
+.site-menu__link:hover {
+  color: #D82727;
+}
+.site-menu__text {
+  font-size: 15px;
+  color: #212121;
+  margin-bottom: 30px;
+}
+.site-menu__text-row {
+  color: inherit;
+  display: block;
+  margin-bottom: 5px;
+}
+/*==============================
+extras (socials, banners)
+ */
+.extras {
+  display: flex;
+  margin-bottom: 95px;
+}
+.extras__col {
+  margin-right: 20px;
+  flex: 1;
+}
+.extras__col:last-child {
+  margin-right: 0;
+}
+.extras__best {
+  text-align: center;
+  color: #FFFFFF;
+  background: #232324;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Yanone Kaffeesatz", arial, sans-serif;
+  text-transform: uppercase;
+  padding: 39px 10%;
+  display: block;
+  line-height: 1;
+}
+.socials {
+  display: flex;
+}
+.socials__item {
+  margin-right: 50px;
+}
+.socials__item:last-child {
+  margin-right: 0;
+}
+.socials__link {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+.socials__link:hover {
+  fill: #D82727;
+}
+.socials__icon {
+  width: 100%;
+  height: 100%;
+}
+.extras__col-socials {
+  height: 100%;
+  background: url("../images/bg/pattern.png") center center / 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

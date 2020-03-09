@@ -39,6 +39,15 @@ html {
     }
 }
 
+
+.wrap-content {
+    width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+
 /*===============================
 header wrapper
  */
@@ -139,22 +148,15 @@ product view
     }
 }
 
-.wrap-content {
-    width: 1100px;
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    //box-sizing: border-box;
-}
-
 
 .product-view {
     display: flex;
     padding: 10px 10px;
     background-color: #FFC92F;
     width: 100%;
-    height: 650px;
+    min-height: 668px;
     margin-bottom: 93px;
+    box-sizing: border-box;
 }
 
 
@@ -167,6 +169,11 @@ product view
 
     &__pic {
         width: 100%;
+        display: none;
+
+        &--active {
+            display: block;
+        }
     }
 }
 
@@ -201,6 +208,7 @@ product form header
     font-size: 54px;
     line-height: 1;
     text-transform: uppercase;
+    margin: 5px 0;
 }
 
 .product-view__price {
@@ -381,14 +389,15 @@ product info tabs
 
     .tabs__button {
         text-transform: uppercase;
-        padding: 0 19px;
+        padding: 8px 19px 4px;
         margin-right: 23px;
         color: #1B1B1B;
         font-family: "Yanone Kaffeesatz", arial, sans-serif;
+        line-height: 1;
         font-size: 24px;
         font-weight: bold;
         transition: all .150s;
-        margin-bottom: 40px;
+        margin-bottom: 70px;
 
         &:last-child {
             margin-right: 0;
@@ -406,11 +415,23 @@ product info tabs
     width: 100%;
     margin-bottom: 90px;
 
+    .wrap-left-rows {
+        display: flex;
+        flex-direction: column;
+        margin: 38px 33px;
+    }
+
+    .wrap-right-rows {
+        display: flex;
+        margin: 43px 88px 43px 47px;
+    }
+
     &__tab {
         border: 10px solid #FFC92F;
         box-sizing: border-box;
         display: none;
         opacity: 0;
+        min-height: 260px;
 
         &--active {
             display: flex;
@@ -420,22 +441,24 @@ product info tabs
 
     &__col1 {
         //padding: 44px 35px;
-        flex: 1;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        //align-items: center;
+        //justify-content: center;
+        flex-basis: 32%;
     }
 
     &__col2 {
         border-left: 1px solid #E5DECE;
-        flex: 2;
+        flex-basis: 70%;
+        display: flex;
     }
 
     &__row {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 17px;
 
         &:last-child {
             margin-bottom: 0;
@@ -443,36 +466,59 @@ product info tabs
     }
 
     &__icon {
-        height: 24px;
-        width: 24px;
+        height: 25px;
+        width: 32px;
         margin-right: 26px;
     }
 
     &__description {
         font-family: "Roboto", Arial, sans-serif;
         line-height: 1;
-        font-size: 12px;
+        font-size: 13px;
         display: flex;
-        justify-content: center;
         align-items: center;
+        //justify-content: center;
         width: 100%;
+    }
 
-        &-text {
-            display: block;
-        }
+    &__description-sizes {
+        font-family: "Roboto", Arial, sans-serif;
+        line-height: 1;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
 
     &__text {
         font-family: "Roboto", Arial, sans-serif;
         line-height: 1.6;
-        font-size: 12px;
-        padding: 44px 85px 44px 35px;
+        font-size: 13px;
+    }
+
+    &__indent:not(:first-child) {
+        margin-top: 10px;
     }
 
     &__pict {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    &__pict--delivery {
+        width: 50%;
+        margin: 40px 60px 40px 40px;
+    }
+
+    &__pict--sizes {
+        width: 73%;
+    }
+
+    &__pict--brand {
         width: 70%;
-        margin-top: 45px;
-        margin-bottom: 42px;
+        margin-top: 50px;
     }
 }
 
@@ -492,8 +538,8 @@ product info tabs
 /*==============================
 Sizes Table
  */
-.grid-calc(@nCols, @nColsNeeded, @nColsBusy:0){
-@busyPercent:  100% - (100% / @nCols * @nColsBusy);
+.grid-calc(@nCols, @nColsNeeded, @nColsBusy:0) {
+    @busyPercent: 100% - (100% / @nCols * @nColsBusy);
     width: calc(@busyPercent / @nCols * @nColsNeeded);
 }
 
@@ -507,7 +553,7 @@ Sizes Table
 
     &__item {
         box-sizing: border-box;
-        border: 1px solid #e5decd;
+        border: 1px solid #E5DECD;
         font-family: "Roboto", Arial, sans-serif;
         font-size: 12px;
         //width: calc(77.8% / 10);
@@ -521,10 +567,148 @@ Sizes Table
             .grid-calc(9, 2);
         }
     }
-    
-    &__item--head{
-        background-color: #f6efe0;
+
+    &__item--head {
+        background-color: #F6EFE0;
         font-size: 14px;
         font-weight: bold;
     }
+}
+
+/*==============================
+footer
+ */
+.footer {
+    margin-bottom: 115px;
+}
+
+.site-menu {
+    margin-bottom: 115px;
+}
+
+.site-menu__sections {
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-menu__col {
+    margin-right: 20px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.site-menu__text-row {
+    color: inherit;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.site-menu__title {
+    font-family: "Yanone Kaffeesatz", arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #212121;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.site-menu__text {
+    font-size: 15px;
+    color: #212121;
+    margin-bottom: 30px;
+}
+
+.site-menu__item {
+    margin-bottom: 15px;
+}
+
+.site-menu__link {
+    color: #737373;
+    font-size: 15px;
+    transition: all .150s;
+
+    &:hover {
+        color: #D82727;
+    }
+}
+
+.site-menu__text {
+    font-size: 15px;
+    color: #212121;
+    margin-bottom: 30px;
+}
+
+.site-menu__text-row {
+    color: inherit;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/*==============================
+extras (socials, banners)
+ */
+
+.extras {
+    display: flex;
+    margin-bottom: 95px;
+}
+
+.extras__col {
+    margin-right: 20px;
+    flex: 1;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.extras__best {
+    text-align: center;
+    color: #FFFFFF;
+    background: #232324;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Yanone Kaffeesatz", arial, sans-serif;
+    text-transform: uppercase;
+    padding: 39px 10%;
+    display: block;
+    line-height: 1;
+}
+
+.socials {
+    display: flex;
+
+    &__item {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        width: 38px;
+        height: 38px;
+        display: block;
+
+        &:hover {
+            fill: #D82727;
+        }
+    }
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.extras__col-socials {
+    height: 100%;
+    background: url("../images/bg/pattern.png") center center / 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
